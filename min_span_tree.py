@@ -9,7 +9,7 @@
      sources: [1] "A Review of Two Decades of Correlations, Hierarchies,
                   Networks and Clustering in Financial Markets" by Gautier,
                   Marti; Nielsen, Frank; Binkowski, Mikołaj; Donnat, Philippe.
-                  (https://arxiv.org/pdf/1703.00485.pdf)
+                  (https://arxiv.org/pdf/1703.00485.pdf), pages 1-2.
               [2] "Wikipedia: Minimum Spanning Tree"
                   (https://en.wikipedia.org/wiki/Minimum_spanning_tree)
               [3] "Official NetworkX library documentation"
@@ -135,9 +135,8 @@ class min_span_tree:
     def kruskal(dataFrame):
         '''
         Static method: Computation of minimum spanning tree edge list
-        by means of Kruskal's algorithm procedure as described in: 
-        ".
-        (source: "https://arxiv.org/pdf/1703.00485.pdf", pages 1 and 2)
+        by means of Kruskal's algorithm procedure as described in source [1]
+        at the beginning of this document.
             -> Inputs: - Dataframe holding ordered triples of the form
                          "(start node, end node, edge weight)". For this
                          case, weight equals correlation distance.
