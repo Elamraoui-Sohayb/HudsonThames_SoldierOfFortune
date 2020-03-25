@@ -13,7 +13,6 @@
                    linalg.html)
 '''
 
-import csv
 import numpy as np
 import datetime as dt
 import yfinance as yf
@@ -49,10 +48,19 @@ if (__name__ == "__main__"):
     '''
     To be executed when this file is run as standalone.
     '''
+
+    # Import list of shares's name strings from GitHub:
+    import pandas as pd
+    url = "https://raw.githubusercontent.com/gsolaril/" \
+        + "HudsonThames_SoldierOfFortune/master/oil.csv"
+    quotes = [i for i in pd.read_csv(url, header = None)[0]]
     
-    # Import prebuilt list of 50 shares' name strings.
+    '''
+    # Import list of shares's name strings from .csv file:
+    import csv
     with open("oil.csv", encoding = 'utf-8-sig') as csvList:
         quotes = [i[0] for i in csv.reader(csvList)]
+    '''
     
     # Market data retrieved from last year to date.
     tf = dt.date.today()
